@@ -17,11 +17,11 @@ class StoryCardCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configScreen()
-        screen.configProtocolsCollectionView(delegate: self, dataSource: self)
+        configProtocol()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    private func configProtocol() {
+        screen.configProtocolsCollectionView(delegate: self, dataSource: self)
     }
     
     private func configScreen() {
@@ -34,6 +34,9 @@ class StoryCardCollectionViewCell: UICollectionViewCell {
         viewModel = StoryCardViewModel(listaStory: listStory)
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 extension StoryCardCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
