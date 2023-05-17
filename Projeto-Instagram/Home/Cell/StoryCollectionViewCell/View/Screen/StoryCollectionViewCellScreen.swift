@@ -31,7 +31,7 @@ class StoryCollectionViewCellScreen: UIView {
         return button
     }()
     
-    lazy var userName: UILabel = {
+    lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
@@ -53,7 +53,7 @@ class StoryCollectionViewCellScreen: UIView {
     private func configAddSubViews() {
         addSubview(profileImageView)
         addSubview(addButton)
-        addSubview(userName)
+        addSubview(userNameLabel)
     }
     
     private func configConstraints() {
@@ -68,9 +68,9 @@ class StoryCollectionViewCellScreen: UIView {
             addButton.bottomAnchor.constraint(equalTo: profileImageView.bottomAnchor),
             addButton.trailingAnchor.constraint(equalTo: profileImageView.trailingAnchor),
             
-            userName.topAnchor.constraint(equalTo: profileImageView.bottomAnchor),
-            userName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            userName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            userNameLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor),
+            userNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            userNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
         
         ])
     }
