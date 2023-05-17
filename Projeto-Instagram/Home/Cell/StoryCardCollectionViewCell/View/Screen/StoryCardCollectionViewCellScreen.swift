@@ -9,7 +9,6 @@ import UIKit
 
 class StoryCardCollectionViewCellScreen: UICollectionViewCell {
    
-    
     lazy var cardView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
