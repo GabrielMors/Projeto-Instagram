@@ -31,6 +31,15 @@ class StoryCollectionViewCellScreen: UIView {
         return button
     }()
     
+    lazy var userName: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configAddSubViews()
@@ -44,6 +53,7 @@ class StoryCollectionViewCellScreen: UIView {
     private func configAddSubViews() {
         addSubview(profileImageView)
         addSubview(addButton)
+        addSubview(userName)
     }
     
     private func configConstraints() {
@@ -57,10 +67,11 @@ class StoryCollectionViewCellScreen: UIView {
             addButton.heightAnchor.constraint(equalToConstant: 25),
             addButton.bottomAnchor.constraint(equalTo: profileImageView.bottomAnchor),
             addButton.trailingAnchor.constraint(equalTo: profileImageView.trailingAnchor),
+            
+            userName.topAnchor.constraint(equalTo: profileImageView.bottomAnchor),
+            userName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            userName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
         
         ])
-        
-        
     }
-    
 }
