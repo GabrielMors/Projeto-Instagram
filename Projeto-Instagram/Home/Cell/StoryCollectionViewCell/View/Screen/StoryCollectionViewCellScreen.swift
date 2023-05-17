@@ -19,13 +19,31 @@ class StoryCollectionViewCellScreen: UIView {
         return image
     }()
     
+    lazy var addButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setBackgroundImage(UIImage(systemName: "plus.circle.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.imageView?.tintColor = .blue
+        button.backgroundColor = .white
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 12.5
+        
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(profileImageView)
+        configAddSubViews()
+        configConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func configAddSubViews() {
+        addSubview(profileImageView)
+        addSubview(addButton)
     }
     
     private func configConstraints() {
@@ -34,6 +52,11 @@ class StoryCollectionViewCellScreen: UIView {
             profileImageView.heightAnchor.constraint(equalToConstant: 70),
             profileImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             profileImageView.topAnchor.constraint(equalTo: topAnchor, constant: 15),
+            
+            addButton.widthAnchor.constraint(equalToConstant: 25),
+            addButton.heightAnchor.constraint(equalToConstant: 25),
+            addButton.bottomAnchor.constraint(equalTo: profileImageView.bottomAnchor),
+            addButton.trailingAnchor.constraint(equalTo: profileImageView.trailingAnchor),
         
         ])
         
