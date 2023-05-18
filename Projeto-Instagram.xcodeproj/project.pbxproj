@@ -24,6 +24,8 @@
 		C4E016A22A158ED400D554D9 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E016A12A158ED400D554D9 /* UIView + Extension.swift */; };
 		C4E016A72A15921C00D554D9 /* PostCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E016A62A15921C00D554D9 /* PostCardCollectionViewCell.swift */; };
 		C4E016AD2A15934D00D554D9 /* PostCardCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E016AC2A15934D00D554D9 /* PostCardCollectionViewCellScreen.swift */; };
+		C4E016B02A15B38500D554D9 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E016AF2A15B38500D554D9 /* Posts.swift */; };
+		C4E016B32A15BD4B00D554D9 /* PostCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E016B22A15BD4B00D554D9 /* PostCardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		C4E016A12A158ED400D554D9 /* UIView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView + Extension.swift"; path = "../../../App-Event/App-Event/Extension/UIView + Extension.swift"; sourceTree = "<group>"; };
 		C4E016A62A15921C00D554D9 /* PostCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		C4E016AC2A15934D00D554D9 /* PostCardCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		C4E016AF2A15B38500D554D9 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		C4E016B22A15BD4B00D554D9 /* PostCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				C462C9F629E57F4200CC8065 /* Stories.swift */,
+				C4E016AF2A15B38500D554D9 /* Posts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 		C4E016A52A1591FA00D554D9 /* PostCardCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				C4E016B12A15BD2A00D554D9 /* ViewModel */,
 				C4E016AB2A1592E000D554D9 /* Screen */,
 				C4E016AE2A15935600D554D9 /* Controller */,
 			);
@@ -282,6 +288,14 @@
 				C4E016A62A15921C00D554D9 /* PostCardCollectionViewCell.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4E016B12A15BD2A00D554D9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C4E016B22A15BD4B00D554D9 /* PostCardViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +376,7 @@
 				C4E016A22A158ED400D554D9 /* UIView + Extension.swift in Sources */,
 				C462C9E929E4663800CC8065 /* HomeViewModel.swift in Sources */,
 				C4E016972A1558B100D554D9 /* StoryCollectionViewCell.swift in Sources */,
+				C4E016B32A15BD4B00D554D9 /* PostCardViewModel.swift in Sources */,
 				C4E016AD2A15934D00D554D9 /* PostCardCollectionViewCellScreen.swift in Sources */,
 				C462C9F429E4E20100CC8065 /* StoryCardViewModel.swift in Sources */,
 				C462C9F729E57F4200CC8065 /* Stories.swift in Sources */,
@@ -369,6 +384,7 @@
 				C462C9CB29E42D2900CC8065 /* AppDelegate.swift in Sources */,
 				C462C9CD29E42D2900CC8065 /* SceneDelegate.swift in Sources */,
 				C462C9F029E4705300CC8065 /* StoryCardCollectionViewCellScreen.swift in Sources */,
+				C4E016B02A15B38500D554D9 /* Posts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

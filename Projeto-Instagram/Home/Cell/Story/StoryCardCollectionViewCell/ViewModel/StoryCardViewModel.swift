@@ -9,18 +9,18 @@ import UIKit
 
 class StoryCardViewModel {
 
-    private var listaStory: [Stories]
+    private var listStory: [Stories]
     
     init(listaStory: [Stories]) {
-        self.listaStory = listaStory
+        self.listStory = listaStory
     }
     
     public var numberOfItems: Int {
-        listaStory.count
+        listStory.count
     }
     
-    func loudCurrentStory(indexPath: IndexPath) -> Stories {
-        listaStory[indexPath.row]
+    public func loudCurrentStory(indexPath: IndexPath) -> Stories {
+        listStory[indexPath.row]
     }
     
 }
