@@ -42,7 +42,7 @@ class HomeViewModel {
     }
     
     public var numberOfItems: Int {
-        1
+        2
     }
     
     public func sizeForItem(indexPath: IndexPath, frame: CGRect) -> CGSize {

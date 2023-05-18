@@ -29,11 +29,15 @@ class PostCollectionViewCellScreen: UIView {
         tap.numberOfTapsRequired = 1
         image.addGestureRecognizer(tap)
         image.isUserInteractionEnabled = true
-        image.isHidden = true
+//        image.isHidden = true
         image.isHidden = false
         
         return image
     }()
+    
+    @objc func tappedLikeImageView() {
+        
+    }
     
     lazy var profileImageView: UIImageView = {
         let image = UIImageView()
@@ -55,9 +59,33 @@ class PostCollectionViewCellScreen: UIView {
         return label
     }()
     
-    @objc func tappedLikeImageView() {
+    lazy var postImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFill
+        image.clipsToBounds = true
+        image.layer.cornerRadius = 15
+        let tap = UITapGestureRecognizer (target: self, action: #selector (tappedPostImageView))
+        tap.numberOfTapsRequired = 2
+        image.addGestureRecognizer(tap)
+        image.isUserInteractionEnabled = true
+        
+        return image
+    }()
+        
+    @objc func tappedPostImageView() {
         
     }
+    
+    lazy var heartImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFill
+        image.image = UIImage(named: "red-heart")
+//        image.isHidden = true
+        image.isHidden = false
+        return image
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -70,6 +98,8 @@ class PostCollectionViewCellScreen: UIView {
         cardView.addSubview(likeImageView)
         cardView.addSubview(profileImageView)
         cardView.addSubview(userNameLabel)
+        cardView.addSubview(postImageView)
+        cardView.addSubview(heartImageView)
     }
     
     required init?(coder: NSCoder) {
@@ -95,9 +125,18 @@ class PostCollectionViewCellScreen: UIView {
             profileImageView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 20),
             
             userNameLabel.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 24),
-            userNameLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 10),
             userNameLabel.trailingAnchor.constraint(equalTo: likeImageView.leadingAnchor, constant: -5),
+            userNameLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 10),
             
+            postImageView.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 17),
+            postImageView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 7),
+            postImageView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -7),
+            postImageView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -7),
+            
+            heartImageView.centerXAnchor.constraint(equalTo: postImageView.centerXAnchor),
+            heartImageView.centerYAnchor.constraint(equalTo: postImageView.centerYAnchor),
+            heartImageView.heightAnchor.constraint(equalToConstant: 70),
+            heartImageView.widthAnchor.constraint(equalToConstant: 70)
         ])
         
     }

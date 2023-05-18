@@ -297,9 +297,9 @@
 		C4E016A52A1591FA00D554D9 /* PostCardCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C4E016B12A15BD2A00D554D9 /* ViewModel */,
 				C4E016AB2A1592E000D554D9 /* Screen */,
 				C4E016AE2A15935600D554D9 /* Controller */,
+				C4E016B12A15BD2A00D554D9 /* ViewModel */,
 			);
 			path = PostCardCollectionViewCell;
 			sourceTree = "<group>";

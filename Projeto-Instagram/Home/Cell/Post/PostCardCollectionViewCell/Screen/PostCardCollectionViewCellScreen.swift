@@ -16,6 +16,7 @@ class PostCardCollectionViewCellScreen: UIView {
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.showsVerticalScrollIndicator = false
         collection.backgroundColor = .clear
+        collection.register(PostCollectionViewCell.self, forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
         
         return collection
     }()
