@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C447B7632A162E7300FBA301 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C447B7622A162E7300FBA301 /* PostCollectionViewCell.swift */; };
+		C447B7662A162EB700FBA301 /* PostCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C447B7652A162EB700FBA301 /* PostCollectionViewCellScreen.swift */; };
 		C462C9CB29E42D2900CC8065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462C9CA29E42D2900CC8065 /* AppDelegate.swift */; };
 		C462C9CD29E42D2900CC8065 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462C9CC29E42D2900CC8065 /* SceneDelegate.swift */; };
 		C462C9CF29E42D2900CC8065 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462C9CE29E42D2900CC8065 /* HomeVC.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C447B7622A162E7300FBA301 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		C447B7652A162EB700FBA301 /* PostCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		C462C9C729E42D2900CC8065 /* Projeto-Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Projeto-Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C462C9CA29E42D2900CC8065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C462C9CC29E42D2900CC8065 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C447B7612A162E3A00FBA301 /* PostCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C447B7642A162E9F00FBA301 /* Screen */,
+				C447B7672A162EC600FBA301 /* Controller */,
+			);
+			path = PostCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C447B7642A162E9F00FBA301 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C447B7652A162EB700FBA301 /* PostCollectionViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C447B7672A162EC600FBA301 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C447B7622A162E7300FBA301 /* PostCollectionViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C462C9BE29E42D2900CC8065 = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +288,7 @@
 		C4E016A42A15911200D554D9 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				C447B7612A162E3A00FBA301 /* PostCollectionViewCell */,
 				C4E016A52A1591FA00D554D9 /* PostCardCollectionViewCell */,
 			);
 			path = Post;
@@ -369,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C462C9CF29E42D2900CC8065 /* HomeVC.swift in Sources */,
+				C447B7662A162EB700FBA301 /* PostCollectionViewCellScreen.swift in Sources */,
 				C4E016A02A1559B900D554D9 /* StoryCollectionViewCellScreen.swift in Sources */,
 				C4E016A72A15921C00D554D9 /* PostCardCollectionViewCell.swift in Sources */,
 				C462C9E229E42E9900CC8065 /* HomeScreen.swift in Sources */,
@@ -376,6 +407,7 @@
 				C4E016A22A158ED400D554D9 /* UIView + Extension.swift in Sources */,
 				C462C9E929E4663800CC8065 /* HomeViewModel.swift in Sources */,
 				C4E016972A1558B100D554D9 /* StoryCollectionViewCell.swift in Sources */,
+				C447B7632A162E7300FBA301 /* PostCollectionViewCell.swift in Sources */,
 				C4E016B32A15BD4B00D554D9 /* PostCardViewModel.swift in Sources */,
 				C4E016AD2A15934D00D554D9 /* PostCardCollectionViewCellScreen.swift in Sources */,
 				C462C9F429E4E20100CC8065 /* StoryCardViewModel.swift in Sources */,
