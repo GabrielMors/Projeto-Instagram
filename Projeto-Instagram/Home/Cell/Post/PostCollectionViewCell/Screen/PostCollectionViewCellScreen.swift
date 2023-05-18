@@ -46,6 +46,14 @@ class PostCollectionViewCellScreen: UIView {
         return image
     }()
     
+    lazy var userNameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Name user"
+        label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        
+        return label
+    }()
     
     @objc func tappedLikeImageView() {
         
@@ -61,7 +69,7 @@ class PostCollectionViewCellScreen: UIView {
         addSubview(cardView)
         cardView.addSubview(likeImageView)
         cardView.addSubview(profileImageView)
-        
+        cardView.addSubview(userNameLabel)
     }
     
     required init?(coder: NSCoder) {
@@ -86,6 +94,9 @@ class PostCollectionViewCellScreen: UIView {
             profileImageView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 17),
             profileImageView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 20),
             
+            userNameLabel.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 24),
+            userNameLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 10),
+            userNameLabel.trailingAnchor.constraint(equalTo: likeImageView.leadingAnchor, constant: -5),
             
         ])
         
