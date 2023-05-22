@@ -13,7 +13,7 @@ class HomeVC: UIViewController {
     private var viewModel: HomeViewModel = HomeViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+//        super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
     }
     

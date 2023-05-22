@@ -23,20 +23,23 @@ class PostCollectionViewCellScreen: UIView {
     lazy var likeImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage (named: "red-heart")
+        image.image = UIImage (named: "red.heart")
         image.contentMode = .scaleAspectFill
         let tap = UITapGestureRecognizer (target: self, action: #selector (tappedLikeImageView))
         tap.numberOfTapsRequired = 1
         image.addGestureRecognizer(tap)
         image.isUserInteractionEnabled = true
-//        image.isHidden = true
-        image.isHidden = false
+        image.isHidden = true
         
         return image
     }()
     
     @objc func tappedLikeImageView() {
-        
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseIn, animations: { self.likeImageView.center.y += 50
+        }, completion: { finished in
+            self.likeImageView.center.y -= 50
+            self.likeImageView.isHidden = true
+        })
     }
     
     lazy var profileImageView: UIImageView = {
@@ -53,7 +56,6 @@ class PostCollectionViewCellScreen: UIView {
     lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Name user"
         label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         
         return label
@@ -72,18 +74,31 @@ class PostCollectionViewCellScreen: UIView {
         
         return image
     }()
-        
+    
     @objc func tappedPostImageView() {
-        
+        heartImageView.isHidden = false
+        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            self.heartImageView.transform = .init(scaleX: 1.8, y: 1.8)
+            self.postImageView.transform = .init(scaleX: 1.05, y: 1.05)
+            self.likeImageView.center.y += 50
+        } , completion: { finished in
+            UIView.animate (withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                self.postImageView.transform = .identity
+                self.likeImageView.center.y -= 50
+                self.likeImageView.isHidden = false
+            })
+            self.heartImageView.transform = .identity
+            self.heartImageView.isHidden = true
+        })
     }
     
     lazy var heartImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFill
-        image.image = UIImage(named: "red-heart")
-//        image.isHidden = true
-        image.isHidden = false
+        image.image = UIImage(named: "red.heart")
+        image.isHidden = true
+        
         return image
     }()
     
