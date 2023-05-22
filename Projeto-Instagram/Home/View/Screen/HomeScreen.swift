@@ -14,6 +14,7 @@ class HomeScreen: UIView {
         layout.scrollDirection = .horizontal
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.translatesAutoresizingMaskIntoConstraints = false
+//        collection.isScrollEnabled = false
         collection.showsHorizontalScrollIndicator = false
         collection.backgroundColor = .clear
         collection.register(PostCardCollectionViewCell.self, forCellWithReuseIdentifier: PostCardCollectionViewCell.identifier)
