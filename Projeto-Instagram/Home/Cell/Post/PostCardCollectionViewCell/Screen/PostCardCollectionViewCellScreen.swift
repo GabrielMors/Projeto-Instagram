@@ -23,6 +23,7 @@ class PostCardCollectionViewCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configAddSubViews()
         collectionView.pin(to: self)
     }
     

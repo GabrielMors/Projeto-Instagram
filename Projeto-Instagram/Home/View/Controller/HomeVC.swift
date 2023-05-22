@@ -12,6 +12,11 @@ class HomeVC: UIViewController {
     private var homeScreen: HomeScreen?
     private var viewModel: HomeViewModel = HomeViewModel()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     override func loadView() {
         homeScreen = HomeScreen()
         view = homeScreen
