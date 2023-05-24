@@ -157,3 +157,17 @@ class PostCollectionViewCellScreen: UIView {
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
